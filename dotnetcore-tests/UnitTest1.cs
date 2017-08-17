@@ -1,14 +1,13 @@
-using System;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using dotnetcore_sample.Controllers; 
+using dotnetcore_sample.Controllers;
+using NUnit.Framework;
 
 namespace dotnetcore_tests
 {
-    [TestClass]
+    [TestFixture]
     public class UnitTest1
     {
-        [TestMethod]
+        [Test]
         public void About()
         {
           // Arrange
@@ -21,7 +20,7 @@ namespace dotnetcore_tests
           Assert.AreEqual("Your application description page.", result.ViewData["Message"]);
         }
 
-        [TestMethod]
+        [Test]
         public void Contact()
         {
           // Arrange
